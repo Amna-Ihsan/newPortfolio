@@ -259,20 +259,27 @@ main {
 }
 .ProjectImg {
   border: 1px solid #fff;
-  box-shadow: 10px 10px 5px lightblue;
+ 
   border-radius: 20px;
   width: 50%;
   height: 300px; /* Set a fixed height for all images */
   /* Optional: add a background color or border to see the container */
+  overflow: hidden;
 }
 .ProjectImg img {
   width: 100%;
   height: 100%;
   border-radius: 20px;
-
+transform: scale(1);
+transition: transform  0.5s;
   object-fit: cover; /* Ensures images cover the container without distortion */
   /* Optional: add a border to the image if needed */
 }
+.ProjectImg img:hover{
+ 
+  transform: scale(1.1);
+}
+
 .ProjectText {
   width: 50%;
 
@@ -306,9 +313,10 @@ main {
   display: flex;
 
   width: 100%;
-
+ 
   justify-content: center;
 }
+
 .projectLink a {
   border: 1px solid rgb(56, 157, 182);
   padding: 10px;
@@ -494,5 +502,4 @@ footer {
     width: 100%;
   }
 }
-@media (max-width: 850px) {
-}
+
