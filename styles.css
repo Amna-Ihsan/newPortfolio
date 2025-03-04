@@ -17,7 +17,11 @@ a {
   color: #fff;
 }
 /* Header */
+/* Jeader animation */
+
+
 header {
+
   position: fixed;
 
   width: 100%;
@@ -29,8 +33,20 @@ header {
   justify-content: space-between;
   z-index: 2;
   background-color: #000000;
+  animation-name: headerAnimation;
+  animation-duration: 1s;
 }
 
+@keyframes headerAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 header img {
   transition: box-shadow 0.3s ease;
   width: 50px;
@@ -148,6 +164,19 @@ main {
   padding: 20px 0;
   padding-bottom: 30px;
   letter-spacing: 2px;
+  animation-name: heroAnimation;
+  animation-duration: 2s;
+
+}
+@keyframes heroAnimation {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 #Hero_Section small {
@@ -219,7 +248,22 @@ main {
 #heroImg {
   max-width: 300px;
   max-height: 300px;
+  animation-name: heroImgAnimation;
+  animation-duration: 2s;
+
+
 }
+@keyframes heroImgAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 #heroImg img {
   width: 100%;
   height: 100%;
@@ -243,13 +287,16 @@ main {
 }
 .projectHeading h1 {
   padding: 10px 0;
-
+  font-size: 50px;
+ 
   margin: 5px 0;
+  text-align: center;
 }
 .projectHeading p {
   padding: 10px 0;
   color: rgb(56, 157, 182);
   margin: 5px 0;
+  text-align: center;
 }
 .projectDiv {
   display: flex;
@@ -277,7 +324,7 @@ transition: transform  0.5s;
 }
 .ProjectImg img:hover{
  
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 
 .ProjectText {
@@ -502,4 +549,3 @@ footer {
     width: 100%;
   }
 }
-
